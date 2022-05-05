@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox staybnt= (CheckBox) findViewById(R.id.staybtn);
         bn= findViewById(R.id.bottomnav);
         bn.setOnNavigationItemSelectedListener(bottomnavMethod);
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
         //Now the action listeners
 
         //Sign-in button
