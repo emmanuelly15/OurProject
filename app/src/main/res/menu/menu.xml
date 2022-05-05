@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <item
+    android:id="@+id/home"
+    android:title="Home"
+    android:icon="@drawable/ic_baseline_home_24"
+    />
+    <item
+        android:id="@+id/scan"
+        android:title="Scan"
+        android:icon="@drawable/ic_baseline_scan"
+        />
+    <item
+        android:id="@+id/documents"
+        android:title="Documents"
+        android:icon="@drawable/ic_baseline_file_document"
+        />
+
+</menu>
