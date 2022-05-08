@@ -11,12 +11,12 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private BottomNavigationView bn; //way to the Navigation bar in activity2
 
 
     @Override
@@ -30,9 +30,8 @@ public class MainActivity extends AppCompatActivity {
         TextView password=(TextView) findViewById(R.id.password);
         Button signinbtn=(Button)  findViewById(R.id.submitbtn);
         CheckBox staybnt= (CheckBox) findViewById(R.id.staybtn);
-        bn= findViewById(R.id.bottomnav);
-        bn.setOnNavigationItemSelectedListener(bottomnavMethod);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+
+
         //Now the action listeners
 
         //Sign-in button
@@ -41,7 +40,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(username.getText().toString().equals("emma") && password.getText().toString().equals("123"))
                 {
-                    Toast.makeText(MainActivity.this, "Login successfstaul",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Login successfull",Toast.LENGTH_SHORT).show();
+                    Intent intent= new Intent (MainActivity.this,MainActivity2.class);
+                    startActivity(intent);
+
 
                 }else
                 {
@@ -62,22 +64,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //method for the navigation listener
 
-    private BottomNavigationView.OnNavigationItemSelectedListener bottomnavMethod= new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            Fragment frangment1=null;//how to call new fragment
-
-           //switch to select the item selected here
-            switch(menuItem.getItemId())
-            {
-                case R.id.scan:
-                    frangment1= new Scanner();
-                    break;
-            }
-            getSupportFragmentManager().beginTransaction().replace(R.id.container,frangment1).commit();
-            return false;
-        }
-              };
 }

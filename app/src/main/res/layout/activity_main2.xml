@@ -17,12 +17,25 @@
             android:layout_width="87dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
+            android:alpha="0.6"
             android:src="@drawable/ic_baseline_account"
             android:text="Profile"
-            android:alpha="0.6"
 
 
             />
+
+        <ImageView
+
+            android:id="@+id/logo"
+            android:layout_width="241dp"
+            android:layout_height="43dp"
+            android:layout_gravity="top"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="80dp"
+            android:alpha="0.100"
+            android:src="@drawable/logo" />
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

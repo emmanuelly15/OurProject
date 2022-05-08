@@ -14,6 +14,7 @@
         android:id="@+id/documents"
         android:title="Documents"
         android:icon="@drawable/ic_baseline_file_document"
+
         />
 
 </menu>
