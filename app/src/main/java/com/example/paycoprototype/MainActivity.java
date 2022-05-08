@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-      //  setContentView(T.layout.activity2_main);
+
 
         //creating objects
         TextView username=(TextView) findViewById(R.id.username);
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 }else
                 {
                     Toast.makeText(MainActivity.this, "Login failed",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Incorrect data entered",Toast.LENGTH_SHORT).show();
                 }
             }
         });
