@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PaycoPrototype" >
         <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
