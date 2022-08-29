@@ -24,13 +24,15 @@
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/drawable/textview_border.xml" value="0.1155" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/activity2_main.xml" value="0.11851851851851852" />
-        <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/activity_final_profile2.xml" value="0.11851851851851852" />
+        <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/activity_description.xml" value="0.20108695652173914" />
+        <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/activity_final_profile2.xml" value="0.2" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/activity_login.xml" value="0.11851851851851852" />
-        <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/activity_main.xml" value="0.11851851851851852" />
+        <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/activity_main2.xml" value="0.11851851851851852" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/content_login.xml" value="0.11851851851851852" />
+        <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/fragment_documents.xml" value="0.20108695652173914" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/fragment_home.xml" value="0.11851851851851852" />
-        <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/fragment_scanner.xml" value="0.25" />
+        <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/layout/fragment_scanner.xml" value="0.33" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/menu/menu.xml" value="0.11851851851851852" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />

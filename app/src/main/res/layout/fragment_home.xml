@@ -1,19 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/grey"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
-    android:background="@drawable/gradient_background">
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Home page content"
-        android:textSize="40dp"
-        android:layout_gravity="center"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-</FrameLayout>
+        <View
+            android:layout_width="410dp"
+            android:layout_height="3dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="105dp"
+            android:background="#000000" />
+
+        <ImageView
+            android:id="@+id/payco_logo"
+            android:layout_width="235dp"
+            android:layout_height="59dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="-85dp"
+            app:srcCompat="@drawable/payco"
+            tools:layout_editor_absoluteX="81dp"
+            tools:layout_editor_absoluteY="42dp" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_marginLeft="325dp"
+            android:layout_marginTop="-55dp"
+            android:layout_width="53dp"
+            android:layout_height="56dp"
+            app:srcCompat="@drawable/profile" />
+
+
+
+        <TextView
+            android:id="@+id/updates"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Recent Updates"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="122dp" />
+
+        <TextView
+            android:id="@+id/petrol_alert"
+            android:layout_width="326dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/textview_border"
+            android:text="Now \n Petrol invoice have been updated!"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="44dp"
+            tools:layout_editor_absoluteY="229dp" />
+
+        <TextView
+            android:id="@+id/view_dismiss"
+            android:layout_width="329dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/textview_border"
+            android:text="1Hr Ago \n Invoice Awaiting Approval"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="44dp"
+            tools:layout_editor_absoluteY="312dp" />
+
+        <Button
+            android:id="@+id/view"
+            android:layout_width="94dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/textview_border"
+            android:text="View" />
+
+        <Button
+            android:id="@+id/dismiss"
+            android:layout_width="94dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="205dp"
+            android:layout_marginTop="-31dp"
+            android:background="@drawable/textview_border"
+            android:text="Dismiss" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <View
+            android:layout_width="410dp"
+            android:layout_height="3dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="655dp"
+            android:background="#000000" />
+
+        <ImageButton
+            android:id="@+id/scan_image"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="9dp"
+            android:layout_width="43dp"
+            android:layout_height="49dp"
+            app:srcCompat="@drawable/scan" />
+
+
+        <ImageButton
+            android:id="@+id/document_image"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="-46dp"
+            android:layout_width="44dp"
+            android:layout_height="47dp"
+            app:srcCompat="@drawable/_60_1608539_document_png_document_file_icon_png_transparent_png" />
+
+        <ImageButton
+            android:id="@+id/home_image"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="-49dp"
+            android:layout_width="42dp"
+            android:layout_height="49dp"
+            app:srcCompat="@drawable/download" />
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
