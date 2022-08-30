@@ -84,8 +84,8 @@
 
         <Button
             android:id="@+id/view"
-            android:layout_width="94dp"
-            android:layout_height="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginLeft="95dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/textview_border"
@@ -94,7 +94,7 @@
         <Button
             android:id="@+id/dismiss"
             android:layout_width="94dp"
-            android:layout_height="32dp"
+            android:layout_height="48dp"
             android:layout_marginLeft="205dp"
             android:layout_marginTop="-31dp"
             android:background="@drawable/textview_border"
@@ -109,42 +109,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-    <View
-        android:layout_width="410dp"
-        android:layout_height="3dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="655dp"
-        android:background="#000000" />
-
-        <ImageButton
-            android:id="@+id/scan_image"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="9dp"
-            android:layout_width="43dp"
-            android:layout_height="49dp"
-            app:srcCompat="@drawable/scan" />
-
-
-        <ImageButton
-            android:id="@+id/document_image"
-            android:layout_marginLeft="320dp"
-            android:layout_marginTop="-46dp"
-            android:layout_width="44dp"
-            android:layout_height="47dp"
-            app:srcCompat="@drawable/_60_1608539_document_png_document_file_icon_png_transparent_png" />
-
-        <ImageButton
-            android:id="@+id/home_image"
-            android:layout_marginLeft="29dp"
-            android:layout_marginTop="-49dp"
-            android:layout_width="42dp"
-            android:layout_height="49dp"
-            app:srcCompat="@drawable/download" />
-
-
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.0"/>
 
 
 
