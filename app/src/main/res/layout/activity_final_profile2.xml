@@ -55,7 +55,7 @@
         <Button
             android:id="@+id/button_logout"
             android:layout_width="110dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_marginLeft="150dp"
             android:layout_marginTop="-250dp"
             android:onClick="signOut"
@@ -76,39 +76,23 @@ Email: JohnDoe@gmail.com \n Contact Number: +1-(***)-(****)
             android:textSize="20dp"
             android:textColor="@color/black"/>
 
-        <ImageView
-            android:id="@+id/home"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="284dp"
-            android:layout_width="43dp"
-            android:layout_height="37dp"
-            app:srcCompat="@drawable/download" />
 
-        <ImageView
-            android:id="@+id/document"
-            android:layout_marginLeft="330dp"
-            android:layout_marginTop="-34dp"
-            android:layout_width="40dp"
-            android:layout_height="32dp"
-            app:srcCompat="@drawable/_60_1608539_document_png_document_file_icon_png_transparent_png" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
 
-    <View
-        android:layout_width="411dp"
-        android:layout_height="2dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="655dp"
-        android:background="#000000" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="411dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="655dp"
+                android:background="#000000" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
