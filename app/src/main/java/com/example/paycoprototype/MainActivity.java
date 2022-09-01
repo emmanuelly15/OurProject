@@ -18,7 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
     
 
-
+//Main activity is used for the LOGIN activity only.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(username.getText().toString().equals("emma") && password.getText().toString().equals("123"))
                 {
+                    //When the credential are correct, it calls MainActivity2 that keeps the bottomNavoigation
+
                     Toast.makeText(MainActivity.this, "Login successfull",Toast.LENGTH_SHORT).show();
                     Intent intent= new Intent (MainActivity.this,MainActivity2.class);
                     startActivity(intent);

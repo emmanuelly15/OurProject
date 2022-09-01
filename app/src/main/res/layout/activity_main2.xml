@@ -11,19 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageButton
-
-            android:id="@+id/Profile"
-            android:layout_width="87dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:alpha="0.6"
-            android:src="@drawable/ic_baseline_account"
-            android:text="Profile"
-
-
-            />
-
         <ImageView
 
             android:id="@+id/logo"

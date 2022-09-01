@@ -13,6 +13,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     private BottomNavigationView bn; //way to the Navigation bar in activity2
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
@@ -25,20 +26,24 @@ public class MainActivity2 extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener bottomnavMethod= new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            Fragment frangment1=null;//how to call new fragment
+            Fragment frangment=null;//how to call new fragment
 
             //switch to select the item selected here
             switch(menuItem.getItemId())
             {
                 case R.id.scan:
-                    frangment1= new Scanner();
+                    frangment= new Scanner();
                     break;
 
                 case R.id.home:
-                    frangment1= new HomeFragment();
+                    frangment= new HomeFragment();
+                    break;
+
+                case R.id.profile:
+                    frangment= new ProfileFragment();
                     break;
             }
-            getSupportFragmentManager().beginTransaction().replace(R.id.container,frangment1).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,frangment).commit();
             return false;
         }
     };

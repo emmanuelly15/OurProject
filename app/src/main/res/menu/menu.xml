@@ -11,9 +11,9 @@
         android:icon="@drawable/ic_baseline_scan"
         />
     <item
-        android:id="@+id/documents"
-        android:title="Documents"
-        android:icon="@drawable/ic_baseline_file_document"
+        android:id="@+id/Profile"
+        android:title="profile"
+        android:icon="@drawable/ic_baseline_account_circle_24"
 
         />
 

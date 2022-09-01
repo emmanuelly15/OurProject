@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Scanner#newInstance} factory method to
+ * Use the {@link Scanner#} factory method to
  * create an instance of this fragment.
  *
  */
