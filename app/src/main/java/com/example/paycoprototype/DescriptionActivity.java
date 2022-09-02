@@ -20,7 +20,12 @@ public class DescriptionActivity extends AppCompatActivity {
 
     TimePickerDialog tpicker; // time picker dialog
     EditText eText;// object for the edittext in xml
+    EditText titleText;
+    EditText typeText;
+    EditText locationText;
+    EditText commentText;
     Button getButton;
+
 
 
 
@@ -29,8 +34,16 @@ public class DescriptionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
 
-        //Now assigning
+        //Parameters declaration and assignment
 
+        //This is for the rest.
+        Button  sendbt= (Button) findViewById(R.id.SendBtn) ; //Send button function
+        titleText=findViewById(R.id.TitleFill); //title
+        typeText=findViewById(R.id.typefill); //Document type
+        locationText=findViewById(R.id.locationfill); //Location
+        commentText=findViewById(R.id.commentfill); //comments section
+
+        //This part is for the time picker only !!
         eText= findViewById(R.id.timeEdit);
         eText.setInputType(InputType.TYPE_NULL);
         eText.setOnClickListener(new View.OnClickListener()
@@ -56,6 +69,19 @@ public class DescriptionActivity extends AppCompatActivity {
                 );
 
                 tpicker.show();
+
+            }
+        });
+
+        //This is the listener for the sentButton, I guess with the API controller !
+
+        sendbt.setOnClickListener(new View.OnClickListener()
+        {
+
+            @Override
+            public void onClick(View view)
+            {
+
 
             }
         });
