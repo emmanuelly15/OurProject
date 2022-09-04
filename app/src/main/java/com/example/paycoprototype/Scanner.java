@@ -7,12 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Scanner} factory method to
- * create an instance of this fragment.
- *
- */
+
 public class Scanner extends Fragment {
 
     public Scanner()
@@ -22,7 +17,7 @@ public class Scanner extends Fragment {
 
     //Parameters
 
-
+ 
 
 
     @Override
