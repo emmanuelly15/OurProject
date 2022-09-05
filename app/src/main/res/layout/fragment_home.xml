@@ -74,6 +74,18 @@
         android:textSize="35dp"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/AddDocbtn"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/docLabel"
+        android:layout_marginLeft="35dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Add new document"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:onClick="AddDoc"/>
 
 
 
