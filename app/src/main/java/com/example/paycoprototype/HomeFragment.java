@@ -42,7 +42,7 @@ Button AddBtn;
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                Intent intent = new Intent(getActivity(), LoginActivity.class); //Albert please replace the LoginActivity with your camera's activity class name !
                 startActivity(intent);
 
             }
