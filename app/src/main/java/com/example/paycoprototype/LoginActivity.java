@@ -72,9 +72,7 @@ public class LoginActivity extends AppCompatActivity {
             //switch to select the item selected here
             switch(menuItem.getItemId())
             {
-                case R.id.scan:
-                    frangment1= new Scanner();
-                    break;
+
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.container,frangment1).commit();
             return false;

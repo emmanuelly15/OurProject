@@ -33,9 +33,7 @@ public class MainActivity2 extends AppCompatActivity {
                 case R.id.home:
                     frangment1= new HomeFragment();
                     break;
-                case R.id.scan:
-                    frangment1= new Scanner();
-                    break;
+
 
                 case R.id.profile:
                     frangment1= new fragmentProfile();
