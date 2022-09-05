@@ -12,7 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
+import com.example.paycoprototype.data.Document;
+
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class DescriptionActivity extends AppCompatActivity {
 
@@ -25,6 +29,19 @@ public class DescriptionActivity extends AppCompatActivity {
     EditText locationText;
     EditText commentText;
     Button getButton;
+
+
+  //parameter for the list.
+
+    private Document item;
+    private List<Document> itemList = new ArrayList<Document>();
+
+    private String title= titleText.getText().toString();
+    private String type= typeText.getText().toString();
+    private String location= locationText.getText().toString();
+    private String comment= commentText.getText().toString();
+
+
 
 
 
@@ -81,6 +98,19 @@ public class DescriptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
+
+
+                for (int i = 0; i < 5; i++) {
+                    item = new Document();
+                    item.setId(1);
+                    item.setType(type);
+                    item.setLocation(location);
+                    item.setComment(comment);
+
+
+                    itemList.add(item);// add to list
+
+                }
 
 
             }
