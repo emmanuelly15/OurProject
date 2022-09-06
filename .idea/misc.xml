@@ -17,14 +17,6 @@
         <entry key="..\:/Users/Emmanuelly/AndroidStudioProjects/PaycoPrototype/app/src/main/res/layout/fragment_home.xml" value="0.24320652173913043" />
         <entry key="..\:/Users/Emmanuelly/AndroidStudioProjects/PaycoPrototype/app/src/main/res/layout/fragment_scanner.xml" value="0.2" />
         <entry key="..\:/Users/Emmanuelly/AndroidStudioProjects/PaycoPrototype/app/src/main/res/menu/menu.xml" value="0.1" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity2_main.xml" value="0.3625" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity_main.xml" value="0.1278772378516624" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity_main2.xml" value="0.22056159420289856" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/content_login.xml" value="0.346875" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/fragment_home.xml" value="0.21014492753623187" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/fragment_profile.xml" value="0.28306159420289856" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/fragment_scanner.xml" value="0.22" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/drawable-v24/capture_button.xml" value="0.241" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/drawable-v24/gradient_background.xml" value="0.241" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/drawable-v24/ic_baseline_account.xml" value="0.241" />
@@ -64,6 +56,9 @@
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/menu/menu.xml" value="0.11851851851851852" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/drawable/profile_user_icon.xml" value="0.1945" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/fragment_home.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/fragment_profile.xml" value="0.2366255144032922" />
       </map>
     </option>
   </component>
@@ -72,12 +67,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.22" />
-      </ProjectState>
-    </option>
   </component>
 </project>
