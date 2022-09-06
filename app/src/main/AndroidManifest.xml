@@ -20,7 +20,7 @@
             android:label="@string/title_activity_login" />
         <activity
             android:name=".MainActivity2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Scanner"
             android:exported="true"/>
