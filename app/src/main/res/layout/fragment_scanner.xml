@@ -4,11 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Scanner"><![CDATA[
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
-    ]]>
+    tools:context=".Scanner">
 
     <ImageView
         android:id="@+id/ImageView"
@@ -18,7 +14,7 @@
 
         android:layout_centerHorizontal="true"
         android:src="@drawable/image_icon"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,ImageContrastCheck" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/capture_picture_Id"

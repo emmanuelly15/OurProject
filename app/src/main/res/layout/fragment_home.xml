@@ -22,14 +22,14 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:foregroundTint="#837C7C"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
                 android:text="@string/col1"
                 android:textColor="@color/black"
-                android:padding="10dp"
                 android:textSize="14sp"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -81,11 +81,11 @@
         android:layout_below="@+id/docLabel"
         android:layout_marginLeft="35dp"
         android:backgroundTint="@color/teal_700"
+        android:onClick="AddDoc"
         android:text="Add new document"
         android:textColor="@color/white"
         android:textSize="10dp"
-        android:textStyle="bold"
-        android:onClick="AddDoc"/>
+        android:textStyle="bold" />
 
 
 

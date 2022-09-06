@@ -34,7 +34,6 @@ public class MainActivity2 extends AppCompatActivity {
                     frangment1= new HomeFragment();
                     break;
 
-
                 case R.id.profile:
                     frangment1= new fragmentProfile();
                     break;
