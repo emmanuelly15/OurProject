@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment{
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getActivity(), Scanner_Activity.class);
+                Intent in = new Intent(getActivity(), DescriptionActivity.class);
 
                 getActivity().startActivity(in);
             }

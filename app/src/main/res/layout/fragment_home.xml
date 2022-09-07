@@ -8,6 +8,14 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+    <ScrollView
+        android:layout_height="1000dp"
+        android:layout_width="1000dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
     <!-- The code below helps to work thru the table -->
     <TableLayout
         android:layout_width="match_parent"
@@ -87,7 +95,8 @@
         android:textSize="10dp"
         android:textStyle="bold" />
 
+        </RelativeLayout>
 
-
+    </ScrollView>
 
 </RelativeLayout>

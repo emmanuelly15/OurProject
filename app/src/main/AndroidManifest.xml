@@ -13,6 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PaycoPrototype" >
+
+        <activity
+            android:name=".DescriptionActivity"
+            android:exported="true" />
         <activity
             android:name=".Scanner_Activity"
             android:exported="true" />

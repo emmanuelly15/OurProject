@@ -7,6 +7,14 @@
     android:background="@drawable/gradient_background"
     tools:context=".MainActivity">
 
+    <ScrollView
+        android:layout_height="1000dp"
+        android:layout_width="1000dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
     <ImageView
 
         android:id="@+id/logo"
@@ -92,6 +100,8 @@
         android:layout_below="@id/password"
 
         />
+        </RelativeLayout>
 
+    </ScrollView>
 
 </RelativeLayout>
