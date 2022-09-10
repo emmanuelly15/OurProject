@@ -56,9 +56,19 @@
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/menu/menu.xml" value="0.11851851851851852" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/drawable/gradient_background.xml" value="0.1925" />
         <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/drawable/profile_user_icon.xml" value="0.1945" />
-        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/fragment_home.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/activity2_main.xml" value="0.15670289855072464" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/activity_description.xml" value="0.15670289855072464" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/activity_final_profile2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/activity_main2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/content_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/fragment_profile.xml" value="0.2366255144032922" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/fragment_scanner.xml" value="0.15670289855072464" />
+        <entry key="..\:/Users/omole/Downloads/MyProjectApp/app/src/main/res/layout/profile_page.xml" value="0.15670289855072464" />
       </map>
     </option>
   </component>
