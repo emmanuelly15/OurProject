@@ -5,16 +5,11 @@
     android:title="Home"
     android:icon="@drawable/ic_baseline_home_24"
     />
-    <item
-        android:id="@+id/scan"
-        android:title="Scan"
-        android:icon="@drawable/ic_baseline_scan"
-        />
+
     <item
         android:id="@+id/Profile"
         android:title="Profile"
         android:icon="@drawable/ic_baseline_account_circle_24"
-
         />
 
 </menu>
