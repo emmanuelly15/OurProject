@@ -11,6 +11,8 @@ public class User
     public String getPhoneNo() {return phoneNo;}
     public String getEmpid() {return empid;}
     public String getPassword() {return password;}
+
+
     public void setId(int id){this.id= id;}
     public void setEmail(String email){this.email=email;}
     public void setName(String name){this.name=name;}

@@ -21,7 +21,7 @@ import java.util.List;
 
 public class DescriptionActivity extends AppCompatActivity {
 
-    //Adding parameters
+    //Adding parameters+
 
     //TimePickerDialog tpicker; // time picker dialog
    // EditText eText;// object for the edittext in xml

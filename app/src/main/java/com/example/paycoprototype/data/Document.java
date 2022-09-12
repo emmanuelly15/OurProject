@@ -10,8 +10,8 @@ public class Document
     //Gets
     public int getID() {return id;}
     public String getEmp(){return employee;}
-    public String getDepartment(){return department;}
-    public String getDevice(){return device;}
+    //public String getDepartment(){return department;}
+   // public String getDevice(){return device;}
     public String getTime(){return time;}
     public String getFormat(){return format;}
     public String getImage(){return image;}
@@ -24,8 +24,8 @@ public class Document
 
     public int setId(int id){return this.id= id;}
     public String setEmp(String employee){return this.employee=employee;}
-    public String setDepartment(String department){return this.department=department;}
-    public String setDevice(String device){return  this.device=device;}
+    //public String setDepartment(String department){return this.department=department;}
+   // public String setDevice(String device){return  this.device=device;}
     public String setTime(String time){return this.time= time;}
     public String setFormat(String format){return this.format=format;}
     public String setImage(String image){return this.image= image ;}
