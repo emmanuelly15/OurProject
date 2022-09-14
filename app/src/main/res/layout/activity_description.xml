@@ -208,16 +208,27 @@
 
             <Button
                 android:id="@+id/AttachButton"
-                android:layout_width="249dp"
-                android:layout_height="28dp"
+                android:layout_width="146dp"
+                android:layout_height="29dp"
                 android:layout_below="@+id/Attachment"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="9dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="11dp"
                 android:backgroundTint="@color/teal_700"
                 android:text="click to attach file "
                 android:textColor="@color/white"
                 android:textSize="8dp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/SentImage"
+                android:layout_width="104dp"
+                android:layout_height="27dp"
+                android:layout_below="@id/Attachment"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="11dp"
+
+
+                />
 
             <TextView
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
 import android.text.InputType;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TimePicker;
 
 import com.example.paycoprototype.data.Document;
@@ -31,6 +33,7 @@ public class DescriptionActivity extends AppCompatActivity {
    // EditText commentText;
    // Button getButton;
     private Button openb;
+    ImageView SentImg;
 
 
   //parameter for the list.
@@ -95,7 +98,7 @@ public class DescriptionActivity extends AppCompatActivity {
         //This is the listener for the sentButton, I guess with the API controller !
 
 
-
+        SentImg=(ImageView) findViewById(R.id.SentImage);
         openb = (Button) findViewById(R.id.AttachButton);
         openb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,12 +107,21 @@ public class DescriptionActivity extends AppCompatActivity {
                 intent = new Intent(DescriptionActivity.this, Scanner_Activity.class);
                  startActivity(intent);
 
+                getThepic();
+
+
 
             }
 
 
         });
 
+    }
+
+    public void getThepic()
+    {
+        Bitmap bitreceiver= (Bitmap) this.getIntent().getParcelableExtra("thePic");
+        SentImg.setImageBitmap(bitreceiver);
 
     }
 }

@@ -82,7 +82,7 @@ public class Scanner_Activity extends AppCompatActivity {
                     if(ContextCompat.checkSelfPermission(Scanner_Activity.this,Manifest.permission.WRITE_EXTERNAL_STORAGE)==PackageManager.PERMISSION_GRANTED)
                     {
                         uploadImg();
-
+                        returnToDescription();
 
 
                     }else{
@@ -152,6 +152,19 @@ public class Scanner_Activity extends AppCompatActivity {
 
         //createImageFile();
 
+
+
+    }
+
+    private  void returnToDescription()
+
+    {
+
+
+        Intent intent;
+        intent = new Intent(Scanner_Activity.this, DescriptionActivity.class);
+        intent.putExtra("thePic", bitmap);
+        startActivity(intent);
 
 
     }
