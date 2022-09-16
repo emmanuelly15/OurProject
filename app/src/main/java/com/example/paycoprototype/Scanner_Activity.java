@@ -36,7 +36,7 @@ public class Scanner_Activity extends AppCompatActivity {
     Bitmap bitmap;
     OutputStream outputStream;
     Button save;
-    private static int REQUEST_CODE=100;
+    static int REQUEST_CODE=100;
     String currentPhotoPath;
 
     @Override
