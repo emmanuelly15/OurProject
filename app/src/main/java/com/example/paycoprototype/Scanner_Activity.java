@@ -116,7 +116,7 @@ public class Scanner_Activity extends AppCompatActivity {
                 uploadImg();
             }else
             {
-              //  Toast.makeText(Scanner_Activity.this, "Please provide the required permission", Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(Scanner_Activity.this, "Please provide the required permission", Toast.LENGTH_SHORT).show();
                 askPermission();
             }
         }

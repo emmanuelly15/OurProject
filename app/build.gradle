@@ -54,4 +54,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
     implementation 'com.github.dhaval2404:imagepicker:2.1'
 
+    implementation 'com.github.ISchwarz23:SortableTableView:2.8.1'
+
 }

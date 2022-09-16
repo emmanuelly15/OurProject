@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
+import org.json.JSONException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,6 +33,13 @@ public class fragmentProfile extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        TextView name = (TextView) view.findViewById(R.id.txtName); //This line as well as the other (**)
+        try {
+            name.setText(MainActivity.userProfile.getString("name"));//(**) are what are used when linking the Login details
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         Button btn_logout = (Button) view.findViewById(R.id.button);
         btn_logout.setOnClickListener(new View.OnClickListener() {

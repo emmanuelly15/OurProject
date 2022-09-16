@@ -17,30 +17,8 @@
         <entry key="..\:/Users/Emmanuelly/AndroidStudioProjects/PaycoPrototype/app/src/main/res/layout/fragment_home.xml" value="0.24320652173913043" />
         <entry key="..\:/Users/Emmanuelly/AndroidStudioProjects/PaycoPrototype/app/src/main/res/layout/fragment_scanner.xml" value="0.2" />
         <entry key="..\:/Users/Emmanuelly/AndroidStudioProjects/PaycoPrototype/app/src/main/res/menu/menu.xml" value="0.1" />
-        <entry key="..\:/Users/Emmanuelly/Desktop/Emmy/app/src/main/res/layout/activity_description.xml" value="0.3932107496463932" />
-        <entry key="..\:/Users/Emmanuelly/Desktop/Emmy/app/src/main/res/layout/activity_scanner.xml" value="0.12132725430597771" />
-        <entry key="..\:/Users/Emmanuelly/Desktop/Emmy/app/src/main/res/layout/fragment_profile.xml" value="0.12132725430597771" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/drawable/ic_baseline_account.xml" value="0.1" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/drawable/ic_baseline_file_document.xml" value="0.1" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity2_main.xml" value="0.3625" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity_description.xml" value="0.3242753623188406" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity_final_profile2.xml" value="0.33" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity_main2.xml" value="0.33" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/activity_scanner.xml" value="0.33" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/content_login.xml" value="0.346875" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/layout/fragment_scanner.xml" value="0.22" />
-        <entry key="..\:/Users/alber/Desktop/Mobile Appl/app/src/main/res/menu/menu.xml" value="0.1" />
-        <entry key="..\:/Users/alber/Desktop/OurProject/app/src/main/res/layout/activity_description.xml" value="0.3578125" />
-        <entry key="..\:/Users/alber/Desktop/OurProject/app/src/main/res/layout/activity_final_profile2.xml" value="0.1757852077001013" />
-        <entry key="..\:/Users/alber/Desktop/OurProject/app/src/main/res/layout/activity_main.xml" value="0.1757852077001013" />
-        <entry key="..\:/Users/alber/Desktop/OurProject/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/Users/alber/Desktop/OurProject/app/src/main/res/layout/fragment_profile.xml" value="0.1757852077001013" />
+        <entry key="..\:/Users/alber/Desktop/Payco Mobile App Final/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/alber/Desktop/Payco Mobile App Final/app/src/main/res/layout/fragment_profile.xml" value="0.1757852077001013" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/drawable-v24/capture_button.xml" value="0.241" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/drawable-v24/gradient_background.xml" value="0.241" />
         <entry key="..\:/Users/alber/StudioProjects/OurProject/app/src/main/res/drawable-v24/ic_baseline_account.xml" value="0.241" />
@@ -88,12 +66,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.22" />
-      </ProjectState>
-    </option>
   </component>
 </project>

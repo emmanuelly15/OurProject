@@ -8,95 +8,47 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <ScrollView
-        android:layout_height="1000dp"
-        android:layout_width="1000dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <RelativeLayout
+        <TextView
+
+            android:id="@+id/docLabel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="Documents"
+            android:textColor="@color/black"
+            android:textSize="35dp"
+            android:textStyle="bold" />
 
-    <!-- The code below helps to work thru the table -->
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/NotifTable"
-        android:layout_below="@id/docLabel"
-        android:background="@color/white"
-        android:layout_margin="40dp">
+        <Button
+            android:id="@+id/AddDocbtn"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="35dp"
+            android:backgroundTint="@color/teal_700"
+            android:onClick="AddDoc"
+            android:text="Add new document"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
 
-        <TableRow android:background="@color/grey">
+        <de.codecrafters.tableview.TableView
+            android:id="@+id/tableView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tableView_columnCount="3"
+            app:tableView_headerElevation="10">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:foregroundTint="#837C7C"
-                android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="@string/col1"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/col2"
-                android:textColor="@color/black"
-                android:padding="10dp"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/col3"
-                android:textColor="@color/black"
-                android:padding="10dp"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                />
+        </de.codecrafters.tableview.TableView>
 
-
-        </TableRow>
-
-    </TableLayout>
-
-
-    <TextView
-
-        android:id="@+id/docLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
-        android:text="Documents"
-        android:textColor="@color/black"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/AddDocbtn"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/docLabel"
-        android:layout_marginLeft="35dp"
-        android:backgroundTint="@color/teal_700"
-        android:onClick="AddDoc"
-        android:text="Add new document"
-        android:textColor="@color/white"
-        android:textSize="10dp"
-        android:textStyle="bold" />
-
-        </RelativeLayout>
-
-    </ScrollView>
+    </LinearLayout>
 
 </RelativeLayout>

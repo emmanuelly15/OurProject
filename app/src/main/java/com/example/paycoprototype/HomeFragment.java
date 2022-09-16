@@ -1,8 +1,14 @@
 package com.example.paycoprototype;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -15,6 +21,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.paycoprototype.data.Document;
@@ -33,6 +41,11 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Scanner;
 
+import de.codecrafters.tableview.TableDataAdapter;
+import de.codecrafters.tableview.TableView;
+import de.codecrafters.tableview.providers.TableDataRowBackgroundProvider;
+import de.codecrafters.tableview.toolkit.SimpleTableHeaderAdapter;
+import de.codecrafters.tableview.toolkit.TableDataRowBackgroundProviders;
 import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -41,10 +54,12 @@ import okhttp3.Response;
 
 
 public class HomeFragment extends Fragment{
-    @Nullable
-    TableLayout tl;
 
-            Button AddBtn;
+    @Nullable
+    TableView<DocumentData> table;
+    final List<DocumentData> documentData = new ArrayList<DocumentData>();;
+
+    Button AddBtn;
     private String base_url ="https://2ad1-41-113-95-53.eu.ngrok.io/document";
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,67 +67,28 @@ public class HomeFragment extends Fragment{
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-
-
-    }
-    public HomeFragment() {
-
-
-
-
-        // Required empty public constructor
-
-
-
-        //RequestBody requestBody = new MultipartBody.Builder()
-                //.setType(MultipartBody.FORM)
-                //.addFormDataPart("comment", comment.getText().toString())
-                //.addFormDataPart("email", "alberto@gmail.com")
-                //.addFormDataPart("title", "title demo ")
-                //.addFormDataPart("fileformat", "fileformat demo ")
-                //.addFormDataPart("location", "location demo ")
-                //.addFormDataPart("amount", "1000.00 ")
-                //.addFormDataPart("title", "Square Logo")
-                //.addFormDataPart("image", "logo-square.png",
-                        //RequestBody.create(MEDIA_TYPE_PNG, new File(imageFile)))
-                //.build();
-
         Request request = new Request.Builder()
-                //.header("Authorization", "Client-ID " + IMGUR_CLIENT_ID)
                 .url(base_url)
-                //.post(requestBody)
                 .build();
 
         final OkHttpClient client = new OkHttpClient();
+        //LayoutInflater lyf = LayoutInflater.from(this.getContext());
         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
-
-            //JSONArray jsa = new JSONArray(new Gson().toJson(response.body().string()));
             JSONArray jsa = new JSONArray(response.body().string());
 
-            List<docData> data = new ArrayList<docData>();
-
-
-
-            for (int i = 0; i < jsa.length() - 1; i++) {
+            for (int i = 0; i < jsa.length(); i++) {
                 JSONObject js = jsa.getJSONObject(i);
-                System.out.println(js.toString());
-
-                docData dd = new docData();
+                DocumentData dd = new DocumentData();
                 dd.number = js.getString("id");
                 dd.file = js.getString("imagePath");
                 dd.status = js.getString("status");
-                data.add(dd);
+                documentData.add(dd);
             }
 
-            //TableView<docData> table =
-
-
-            System.out.println(response.body().string());
         } catch (Exception e) {
             System.out.println(e.toString());
         }
-
 
     }
 
@@ -121,26 +97,82 @@ public class HomeFragment extends Fragment{
         View v = inflater.inflate(R.layout.fragment_home, container, false);
         Button btn = (Button) v.findViewById(R.id.AddDocbtn);
 
-        tl = (TableLayout) v.findViewById(R.id.NotifTable);
+        table = v.findViewById(R.id.tableView);
+        table.setHeaderAdapter(new SimpleTableHeaderAdapter(getContext(), "Number", "File", "Status"));
+        table.setDataAdapter(new DocumentDataTableDataAdapter(getContext(), documentData));
+        //table.setDataRowBackgroundProvider(new DocumentDataTableDataAdapter(getContext(), documentData));
+        int colorEvenRows = getResources().getColor(R.color.white);
+        int colorOddRows = getResources().getColor(R.color.grey);
+        table.setDataRowBackgroundProvider(TableDataRowBackgroundProviders.alternatingRowColors(colorEvenRows, colorOddRows));
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(getActivity(), DescriptionActivity.class);
-
                 getActivity().startActivity(in);
             }
         });
         return v;
-
-
     }
+}
 
-
-    }
-
-class docData {
+class DocumentData {
     public String number;
     public String file;
     public String status;
 }
+
+class DocumentDataTableDataAdapter extends TableDataAdapter<DocumentData> implements TableDataRowBackgroundProvider<DocumentData> {
+
+    public DocumentDataTableDataAdapter(Context context, List<DocumentData> data) {
+        super(context, data);
+    }
+
+    @Override
+    public View getCellView(int rowIndex, int columnIndex, ViewGroup parentView) {
+        DocumentData data = getRowData(rowIndex);
+        View v = null;
+
+        switch (columnIndex) {
+            case 0: //Number Columb//
+                final TextView t = new TextView(getContext());
+                t.setText(data.number);
+                return t;
+            case 1: //File Columb//
+                final TextView file = new TextView(getContext());
+                file.setText(data.file);
+                return file;
+            case 2://Status Columb//
+                final TextView status = new TextView(getContext());
+                status.setText(data.status);
+                if(data.status.equalsIgnoreCase("Accepted")) {
+                    status.setTextColor(Color.BLUE);
+                    //status.set
+                } else if(data.status.equalsIgnoreCase("Rejected")) {
+                    status.setTextColor(Color.RED);
+                }
+                return status;
+            case 3:
+        }
+
+        return v;
+    }
+
+    @SuppressLint("ResourceAsColor")
+    @Override
+    public Drawable getRowBackground(final int rowIndex, final DocumentData data) {
+        int rowColor = getResources().getColor(R.color.white);
+        if(data.status.equalsIgnoreCase("Accepted") ) {
+            rowColor = R.color.select_blue;
+        } else if(data.status.equalsIgnoreCase("Rejected")) {
+            rowColor = R.color.purple_700;
+        } else {
+            rowColor = R.color.black;
+        }
+
+        return new ColorDrawable(rowColor);
+    }
+
+}
+
