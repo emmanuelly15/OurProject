@@ -61,7 +61,7 @@ public class HomeFragment extends Fragment{
 
     Button AddBtn;
     //private String base_url ="https://2ad1-41-113-95-53.eu.ngrok.io/document";
-    private String base_url =" https://7d53-41-113-34-37.eu.ngrok.io/document";
+    private String base_url ="https://7615-41-113-34-37.eu.ngrok.io/document";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
