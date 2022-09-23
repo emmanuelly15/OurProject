@@ -80,27 +80,27 @@
         android:layout_height="30dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="201dp"
-        android:layout_marginBottom="173dp"
+        android:layout_marginStart="177dp"
+        android:layout_marginBottom="170dp"
         android:background="#CCC4C4" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="168dp"
-        android:layout_height="30dp"
+        android:layout_width="178dp"
+        android:layout_height="29dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="164dp"
-        android:layout_marginBottom="270dp"
+        android:layout_marginStart="171dp"
+        android:layout_marginBottom="267dp"
         android:background="#CCC4C4" />
 
     <TextView
         android:id="@+id/txtName"
-        android:layout_width="168dp"
-        android:layout_height="30dp"
+        android:layout_width="175dp"
+        android:layout_height="31dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="158dp"
+        android:layout_marginStart="171dp"
         android:layout_marginBottom="377dp"
         android:background="#CCC4C4" />
 
