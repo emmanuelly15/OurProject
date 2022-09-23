@@ -55,7 +55,7 @@ public class DescriptionActivity extends AppCompatActivity {
     private Button openb;
     private Button sendBtn;
     //private String base_url ="http://api.payco.gngengineering.co.za/api/ImageUpload/UploadImages";
-    private String base_url ="https://7615-41-113-34-37.eu.ngrok.io/api/ImageUpload/UploadImages";
+    private String base_url ="https://3b9e-41-113-122-143.eu.ngrok.io/api/ImageUpload/UploadImages";
     // RequestQueue rq;
 
     private String imageFile;
@@ -166,16 +166,25 @@ public class DescriptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                EditText comment = (EditText) findViewById(R.id.commentfill);
+                EditText comment = (EditText) findViewById(R.id.commentfill); //Comment
+
+                EditText email = (EditText) findViewById(R.id.emaildetails); //email
+                EditText title = (EditText) findViewById(R.id.TitleFill); //Title
+                EditText document = (EditText) findViewById(R.id.typefill); //Document Type
+                EditText location = (EditText) findViewById(R.id.locationfill); //location
+                EditText amount = (EditText) findViewById(R.id.AmountFill); //Amount
+
+
+
                 final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/png");
                 RequestBody requestBody = new MultipartBody.Builder()
                         .setType(MultipartBody.FORM)
                         .addFormDataPart("comment", comment.getText().toString())
-                        .addFormDataPart("email", "alberto@gmail.com")
-                        .addFormDataPart("title", "title demo ")
-                        .addFormDataPart("fileformat", "fileformat demo ")
-                        .addFormDataPart("location", "location demo ")
-                        .addFormDataPart("amount", "1000.00 ")
+                        .addFormDataPart("email", email.getText().toString())
+                        .addFormDataPart("title", title.getText().toString())
+                        .addFormDataPart("fileformat", document.getText().toString())
+                        .addFormDataPart("location", location.getText().toString())
+                        .addFormDataPart("amount", amount.getText().toString())
                         .addFormDataPart("title", "Square Logo")
                         .addFormDataPart("image", "logo-square.png",
                                 RequestBody.create(MEDIA_TYPE_PNG, new File(imageFile)))

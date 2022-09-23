@@ -139,13 +139,13 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="0dp"
                 android:gravity="left"
-                android:text="      Time"
+                android:text="      Email Address"
                 android:textColor="@color/black"
                 android:textSize="10dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/timeEdit"
+                android:id="@+id/emaildetails"
                 android:layout_width="380dp"
                 android:layout_height="48dp"
                 android:layout_below="@id/time"
@@ -165,7 +165,7 @@
                 android:id="@+id/comment_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/timeEdit"
+                android:layout_below="@id/emaildetails"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="0dp"

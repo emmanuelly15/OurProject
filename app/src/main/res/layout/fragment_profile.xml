@@ -17,8 +17,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="118dp"
         android:background="#787373"
         android:foregroundTint="#4C4646" />
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="206dp"
+        android:layout_marginBottom="37dp"
         android:background="#2336A3"
         android:text="Logout"
         android:textColor="#FFFFFF"
@@ -41,8 +41,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="255dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="185dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name:"
@@ -54,8 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="323dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="296dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Email:"
@@ -67,8 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="297dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="166dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Phone:"
@@ -80,8 +80,8 @@
         android:layout_height="30dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="149dp"
-        android:layout_marginBottom="307dp"
+        android:layout_marginStart="201dp"
+        android:layout_marginBottom="173dp"
         android:background="#CCC4C4" />
 
     <TextView
@@ -90,8 +90,8 @@
         android:layout_height="30dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="151dp"
-        android:layout_marginBottom="373dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginBottom="270dp"
         android:background="#CCC4C4" />
 
     <TextView
@@ -100,8 +100,8 @@
         android:layout_height="30dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginBottom="438dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginBottom="377dp"
         android:background="#CCC4C4" />
 
     <TextView
@@ -114,40 +114,27 @@
         android:layout_marginBottom="310dp"
         android:background="#FFFFFF" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="113dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="156dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Profile"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="103dp"
-        android:layout_height="86dp"
+        android:layout_width="84dp"
+        android:layout_height="75dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="6dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="172dp"
         android:scaleType="fitStart"
         android:src="@drawable/ic_baseline_account" />
 
     <EditText
         android:id="@+id/editTextTextPersonName5"
-        android:layout_width="wrap_content"
+        android:layout_width="57dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="81dp"
-        android:layout_marginEnd="-72dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="181dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Profile"
