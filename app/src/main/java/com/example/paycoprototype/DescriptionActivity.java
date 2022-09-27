@@ -176,10 +176,14 @@ public class DescriptionActivity extends AppCompatActivity {
 
 
 
+
                 final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/png");
                 RequestBody requestBody = new MultipartBody.Builder()
                         .setType(MultipartBody.FORM)
                         .addFormDataPart("comment", comment.getText().toString())
+
+
+
                         .addFormDataPart("email", email.getText().toString())
                         .addFormDataPart("title", title.getText().toString())
                         .addFormDataPart("fileformat", document.getText().toString())

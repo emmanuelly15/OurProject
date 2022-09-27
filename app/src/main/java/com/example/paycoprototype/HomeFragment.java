@@ -84,6 +84,7 @@ public class HomeFragment extends Fragment{
                 dd.number = js.getString("id");
                 dd.file = js.getString("imagePath");
                 dd.status = js.getString("status");
+
                 documentData.add(dd);
             }
 
@@ -122,6 +123,7 @@ class DocumentData {
     public String number;
     public String file;
     public String status;
+
 }
 
 class DocumentDataTableDataAdapter extends TableDataAdapter<DocumentData> implements TableDataRowBackgroundProvider<DocumentData> {

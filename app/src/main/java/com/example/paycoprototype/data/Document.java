@@ -19,6 +19,7 @@ public class Document
     public String getComment(){return comment;}
     public String getLocation(){return location;}
 
+
    //Gets
 
     public int setId(int id){return this.id= id;}
@@ -30,6 +31,7 @@ public class Document
     public String setAmount(String amount){return this.amount=amount;}
     public String setComment(String comment){return this.comment=comment;}
     public String setLocation(String location){return this.location=location;}
+
 
 
 
