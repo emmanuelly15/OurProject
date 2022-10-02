@@ -12,15 +12,16 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="338dp"
-        android:layout_height="608dp"
+        android:layout_width="341dp"
+        android:layout_height="398dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="118dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="164dp"
         android:background="#787373"
         android:foregroundTint="#4C4646" />
+
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -28,26 +29,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="255dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name:"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="301dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Email:"
         android:textStyle="bold" />
 
     <EditText
@@ -57,57 +45,35 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="45dp"
-        android:layout_marginBottom="378dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="223dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Phone:"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="168dp"
-        android:layout_height="30dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="181dp"
-        android:layout_marginBottom="378dp"
-        android:background="#CCC4C4" />
-
-    <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/txtphone"
         android:layout_width="155dp"
         android:layout_height="33dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="188dp"
-        android:layout_marginBottom="471dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginBottom="221dp"
         android:background="#CCC4C4" />
 
     <TextView
         android:id="@+id/txtName"
-        android:layout_width="173dp"
-
-        android:layout_height="47dp"
+        android:layout_width="159dp"
+        android:layout_height="34dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="188dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="206dp"
         android:layout_marginTop="186dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="601dp"
+        android:layout_marginBottom="313dp"
         android:background="#CCC4C4" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="142dp"
-        android:layout_marginBottom="310dp"
-        android:background="#FFFFFF" />
-
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -140,8 +106,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="150dp"
-        android:layout_marginBottom="202dp"
+        android:layout_marginBottom="79dp"
         android:background="#2336A3"
         android:text="Logout"
         android:textColor="#FFFFFF"

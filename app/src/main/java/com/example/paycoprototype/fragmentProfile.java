@@ -41,6 +41,20 @@ public class fragmentProfile extends Fragment {
             e.printStackTrace();
         }
 
+        TextView phone = (TextView) view.findViewById(R.id.txtphone); //This line as well as the other (**)
+        try {
+            phone.setText(MainActivity.userProfile.getString("telephone"));//(**) are what are used when linking the Login details
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+/*
+        TextView email = (TextView) view.findViewById(R.id.txtemail); //This line as well as the other (**)
+        try {
+            name.setText(MainActivity.userProfile.getString("email"));//(**) are what are used when linking the Login details
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+*/
         Button btn_logout = (Button) view.findViewById(R.id.button);
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
