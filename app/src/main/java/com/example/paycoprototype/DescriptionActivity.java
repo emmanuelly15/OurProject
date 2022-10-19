@@ -152,6 +152,23 @@ public class DescriptionActivity extends AppCompatActivity {
 
         ActivityCompat.requestPermissions(DescriptionActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_CODE);
 
+        Spinner Typedropdown=(Spinner) findViewById(R.id.dropdownList);//spinner is for dropdown
+        ArrayAdapter<String> typeadapter= new ArrayAdapter<String>(DescriptionActivity.this,
+                android.R.layout.simple_spinner_item, options);//adapter is for the change
+        typeadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Typedropdown.setAdapter(typeadapter);//this will get what is on the adapter
+        String elSelected= Typedropdown.getSelectedItem().toString();
+        /*spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                value = parent.getItemAtPosition(position).toString();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });*/
+
         openb = (Button) findViewById(R.id.AttachButton);
         openb.setOnClickListener(new View.OnClickListener() {
 
@@ -175,25 +192,7 @@ public class DescriptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                /*
-                Spinner Typedropdown=(Spinner) findViewById(R.id.dropdownList);//spinner is for dropdown
-                ArrayAdapter<String> typeadapter= new ArrayAdapter<String>(DescriptionActivity.this,
-                        android.R.layout.simple_spinner_item, options);//adapter is for the change
 
-                typeadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                Typedropdown.setAdapter(typeadapter);//this will get what is on the adapter
-
-                spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        value = parent.getItemAtPosition(position).toString();
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
-                    }
-                });*/
 
 
                 EditText comment = (EditText) findViewById(R.id.commentfill); //Comment
@@ -211,11 +210,11 @@ public class DescriptionActivity extends AppCompatActivity {
                     title.requestFocus();
                     title.setError("Field Cannot Be Empty");
                 }
-                EditText document = (EditText) findViewById(R.id.typefill); //Document Type
+                /*EditText document = (EditText) findViewById(R.id.typefill); //Document Type
                 if (document.getText().toString().length()==0){
                     document.requestFocus();
                     document.setError("Field Cannot Be Empty");
-                }
+                }*/
                 EditText location = (EditText) findViewById(R.id.locationfill); //location
                 if (location.getText().toString().length()==0){
                     location.requestFocus();
@@ -247,7 +246,7 @@ public class DescriptionActivity extends AppCompatActivity {
                         .addFormDataPart("comment", comment.getText().toString())
                         .addFormDataPart("email", email.getText().toString())
                         .addFormDataPart("title", title.getText().toString())
-                        .addFormDataPart("fileformat", document.getText().toString())
+                        .addFormDataPart("fileformat", elSelected)
                         .addFormDataPart("location", location.getText().toString())
                         .addFormDataPart("amount", amount.getText().toString())
                         .addFormDataPart("title", "Square Logo")
