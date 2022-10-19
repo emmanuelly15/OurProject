@@ -61,7 +61,7 @@ public class HomeFragment extends Fragment{
 
     Button AddBtn;
     //private String base_url ="https://2ad1-41-113-95-53.eu.ngrok.io/document";
-    private String base_url ="https://ab9f-41-113-222-247.in.ngrok.io/document";
+    private String base_url ="https://6969-41-113-54-140.eu.ngrok.io/document";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,14 +78,19 @@ public class HomeFragment extends Fragment{
             if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
             JSONArray jsa = new JSONArray(response.body().string());
 
-            for (int i = 0; i < jsa.length(); i++) {
-                JSONObject js = jsa.getJSONObject(i);
-                DocumentData dd = new DocumentData();
-                dd.number = js.getString("id");
-                dd.file = js.getString("imagePath");
-                dd.status = js.getString("status");
 
-                documentData.add(dd);
+            for (int i = 0; i < jsa.length(); i++) {
+                DocumentData dd = new DocumentData();
+                JSONObject js = jsa.getJSONObject(i);
+                dd.email = js.getString("email");
+                if (dd.email.matches(MainActivity.userProfile.getString("email"))) {
+                    dd.number = js.getString("id");
+                    dd.file = js.getString("imagePath");
+                    dd.status = js.getString("status");
+
+                    documentData.add(dd);
+                }
+
             }
 
         } catch (Exception e) {
@@ -123,6 +128,7 @@ class DocumentData {
     public String number;
     public String file;
     public String status;
+    public String email;
 
 }
 

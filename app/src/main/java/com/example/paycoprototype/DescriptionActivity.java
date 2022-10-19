@@ -65,7 +65,7 @@ public class DescriptionActivity extends AppCompatActivity {
     private Button openb;
     private Button sendBtn;
     //private String base_url ="http://api.payco.gngengineering.co.za/api/ImageUpload/UploadImages";
-    private String base_url = "https://ab9f-41-113-222-247.in.ngrok.io/api/ImageUpload/UploadImages";
+    private String base_url = "https://6969-41-113-54-140.eu.ngrok.io/api/ImageUpload/UploadImages";
     // RequestQueue rq;
 
     private String imageFile;
