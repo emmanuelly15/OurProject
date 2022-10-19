@@ -26,6 +26,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.example.paycoprototype'
 }
 
 dependencies {
@@ -55,5 +56,7 @@ dependencies {
     implementation 'com.github.dhaval2404:imagepicker:2.1'
 
     implementation 'com.github.ISchwarz23:SortableTableView:2.8.1'
+
+    implementation 'com.google.android.gms:play-services-location:21.0.0'
 
 }

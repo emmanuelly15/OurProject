@@ -14,4 +14,7 @@
     <string name="col1">Number</string>
     <string name="col2">File</string>
     <string name="col3">Status</string>
+
+    <!--<string-array name="TypeOption">    <item>Invoice</item>    <item>Authorisation</item>    <item>Bill</item>    <item>Tickets</item></string-array>
+-->
 </resources>
