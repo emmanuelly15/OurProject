@@ -192,18 +192,15 @@ public class DescriptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-
-
                 EditText comment = (EditText) findViewById(R.id.commentfill); //Comment
-                if (comment.getText().toString().length() == 0){
+                if (comment.getText().toString().length() == 0 || comment.getText().toString().length() >= 200){
                     comment.requestFocus();
-                    comment.setError("Field Cannot Be Empty");
+                    comment.setError("Field must contain at most 200 Characters");
                 }
                 EditText email = (EditText) findViewById(R.id.emaildetails); //email
-                if (email.getText().toString().length() == 0){
+                if (email.getText().toString().length() == 0 || !email.getText().toString().contains("@")){
                     email.requestFocus();
-                    email.setError("Field Cannot Be Empty");
+                    email.setError("Field cannot be empty and please enter a standard email address");
                 }
                 EditText title = (EditText) findViewById(R.id.TitleFill); //Title
                 if (title.getText().toString().length() == 0){
@@ -227,7 +224,7 @@ public class DescriptionActivity extends AppCompatActivity {
                 }
                 else if (!amount.getText().toString().matches( "[0-9]")){
                     amount.requestFocus();
-                    amount.setError(("Please Enter in Numeral Values, no Currency"));
+                    amount.setError(("Please Enter in Numeral Values, No Currency or Letter"));
                 }
 
                 /*boolean check = validateinfo(title.getText().toString(), document.getText().toString(),
