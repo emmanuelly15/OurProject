@@ -6,10 +6,12 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -18,7 +20,10 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -65,7 +70,7 @@ public class DescriptionActivity extends AppCompatActivity {
     private Button openb;
     private Button sendBtn;
     //private String base_url ="http://api.payco.gngengineering.co.za/api/ImageUpload/UploadImages";
-    private String base_url = "https://6969-41-113-54-140.eu.ngrok.io/api/ImageUpload/UploadImages";
+    private String base_url = "https://6ea5-41-113-69-117.eu.ngrok.io/api/ImageUpload/UploadImages";
     // RequestQueue rq;
 
     private String imageFile;
@@ -75,6 +80,9 @@ public class DescriptionActivity extends AppCompatActivity {
     String value;
 
     EditText TitleFill, typefill, locationfill, emaildetails, commentfill, AmountFill;
+
+    private Button mylocation;
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -222,7 +230,7 @@ public class DescriptionActivity extends AppCompatActivity {
                     amount.requestFocus();
                     amount.setError("Field Cannot Be Empty");
                 }
-                else if (!amount.getText().toString().matches( "[0-9]")){
+                else if (!amount.getText().toString().matches( "[0-100]")){
                     amount.requestFocus();
                     amount.setError(("Please Enter in Numeral Values, No Currency or Letter"));
                 }

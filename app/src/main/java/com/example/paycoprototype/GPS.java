@@ -1,12 +1,14 @@
 package com.example.paycoprototype;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +19,10 @@ import androidx.core.content.PackageManagerCompat;
 public class GPS extends AppCompatActivity {
     private TextView textViewlongitude, textViewlatitude;
     private LocationManager locationManager;
+
+    public String glocation;
+    public String lg;
+    public String lt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -36,8 +42,20 @@ public class GPS extends AppCompatActivity {
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10, 1, new LocationListener() {
             @Override
             public void onLocationChanged(@NonNull Location location) {
+
                 textViewlongitude.setText((String.valueOf(location.getLongitude())));
                 textViewlatitude.setText(String.valueOf(location.getLatitude()));
+
+                lg = String.valueOf(location.getLongitude());
+                lt = String.valueOf(location.getLatitude());
+
+                //lt=textViewlongitude.getText().toString();
+                glocation= lg+"-"+lt; //Location's string
+                Toast.makeText(GPS.this, glocation,Toast.LENGTH_SHORT).show();
+                /*//Sending from GPS Activity to Description Activity
+                Intent lintent= new Intent(getApplicationContext(),DescriptionActivity.class);
+                lintent.putExtra("theLocation",glocation);
+                startActivity(lintent);*/
             }
 
         });

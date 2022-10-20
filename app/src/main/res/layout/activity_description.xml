@@ -132,7 +132,7 @@
             <EditText
 
                 android:id="@+id/locationfill"
-                android:layout_width="382dp"
+                android:layout_width="300dp"
                 android:layout_height="48dp"
                 android:layout_below="@id/location"
                 android:layout_marginStart="10dp"
@@ -144,6 +144,16 @@
                 android:padding="10dp"
                 android:textColor="@color/black"
                 android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/addlocation"
+                android:layout_width="58dp"
+                android:layout_height="36dp"
+                android:layout_below="@id/locationfill"
+                android:layout_marginStart="330dp"
+                android:layout_marginTop="-52dp"
+                android:background="#8618DFDE"
+                android:drawableBottom="@android:drawable/ic_menu_mylocation" />
 
             <TextView
 
