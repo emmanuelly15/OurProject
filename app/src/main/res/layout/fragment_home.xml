@@ -45,7 +45,7 @@
             android:id="@+id/tableView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:tableView_columnCount="3"
+            app:tableView_columnCount="4"
             app:tableView_headerElevation="10">
 
         </de.codecrafters.tableview.TableView>

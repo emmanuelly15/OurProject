@@ -70,7 +70,7 @@ public class DescriptionActivity extends AppCompatActivity {
     private Button openb;
     private Button sendBtn;
     //private String base_url ="http://api.payco.gngengineering.co.za/api/ImageUpload/UploadImages";
-    private String base_url = "https://6ea5-41-113-69-117.eu.ngrok.io/api/ImageUpload/UploadImages";
+    private String base_url = "https://5073-41-113-62-141.eu.ngrok.io/api/ImageUpload/UploadImages";
     // RequestQueue rq;
 
     private String imageFile;
@@ -230,7 +230,7 @@ public class DescriptionActivity extends AppCompatActivity {
                     amount.requestFocus();
                     amount.setError("Field Cannot Be Empty");
                 }
-                else if (!amount.getText().toString().matches( "[0-100]")){
+                else if (!amount.getText().toString().matches( "[0-10]")){
                     amount.requestFocus();
                     amount.setError(("Please Enter in Numeral Values, No Currency or Letter"));
                 }
@@ -372,13 +372,6 @@ typeadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_ite
 Typedropdown.setAdapter(typeadapter);//this will get what is on the adapter
 String elSelected= Typedropdown.getSelectedItem().toString();//This is where the string for the selected element
 Toast.makeText(getApplicationContext(),elSelected,Toast.LENGTH_SHORT).show(); //just to show
-
-
-
-
-
-
-
 
 <Spinner
 android:id="@+id/dropdownList"

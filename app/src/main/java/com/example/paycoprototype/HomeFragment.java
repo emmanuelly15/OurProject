@@ -61,7 +61,7 @@ public class HomeFragment extends Fragment{
 
     Button AddBtn;
     //private String base_url ="https://2ad1-41-113-95-53.eu.ngrok.io/document";
-    private String base_url ="https://6ea5-41-113-69-117.eu.ngrok.io/document";
+    private String base_url ="https://5073-41-113-62-141.eu.ngrok.io/document";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +87,7 @@ public class HomeFragment extends Fragment{
                     dd.number = js.getString("id");
                     dd.file = js.getString("imagePath");
                     dd.status = js.getString("status");
+                    dd.reason = js.getString("reason");
 
                     documentData.add(dd);
                 }
@@ -105,7 +106,7 @@ public class HomeFragment extends Fragment{
         Button btn = (Button) v.findViewById(R.id.AddDocbtn);
 
         table = v.findViewById(R.id.tableView);
-        table.setHeaderAdapter(new SimpleTableHeaderAdapter(getContext(), "Number", "File", "Status"));
+        table.setHeaderAdapter(new SimpleTableHeaderAdapter(getContext(), "Number", "File", "Status", "Reason"));
         table.setDataAdapter(new DocumentDataTableDataAdapter(getContext(), documentData));
         //table.setDataRowBackgroundProvider(new DocumentDataTableDataAdapter(getContext(), documentData));
         int colorEvenRows = getResources().getColor(R.color.white);
@@ -129,6 +130,7 @@ class DocumentData {
     public String file;
     public String status;
     public String email;
+    public String reason;
 
 }
 
@@ -163,6 +165,10 @@ class DocumentDataTableDataAdapter extends TableDataAdapter<DocumentData> implem
                 }
                 return status;
             case 3:
+                final TextView reason = new TextView(getContext());
+                reason.setText(data.reason);
+                return reason;
+            case 4:
         }
 
         return v;

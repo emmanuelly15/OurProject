@@ -25,7 +25,7 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
     //public static String base_url ="https://c726-41-113-34-37.eu.ngrok.io";
-    public static String base_url ="https://6ea5-41-113-69-117.eu.ngrok.io";
+    public static String base_url ="https://5073-41-113-62-141.eu.ngrok.io";
     public static JSONObject userProfile;
 
     @Override
