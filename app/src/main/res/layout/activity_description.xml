@@ -129,11 +129,11 @@
                 android:textStyle="bold" />
 
 
-            <EditText
+            <TextView
 
                 android:id="@+id/locationfill"
-                android:layout_width="300dp"
-                android:layout_height="48dp"
+                android:layout_width="385dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/location"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="3dp"
@@ -143,8 +143,8 @@
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:textColor="@color/black"
-                android:textSize="25dp" />
-
+                android:textSize="19dp" />
+<!--
             <Button
                 android:id="@+id/addlocation"
                 android:layout_width="58dp"
@@ -154,7 +154,7 @@
                 android:layout_marginTop="-52dp"
                 android:background="#8618DFDE"
                 android:drawableBottom="@android:drawable/ic_menu_mylocation" />
-
+-->
             <TextView
 
                 android:id="@+id/time"
@@ -266,7 +266,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="0dp"
                 android:gravity="left"
-                android:text="      Amount(if applicable)"
+                android:text="      Amount"
                 android:textColor="@color/black"
                 android:textSize="10dp"
                 android:textStyle="bold" />
@@ -286,7 +286,8 @@
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:textColor="@color/black"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:inputType="number"/>
 
             <Button
                 android:id="@+id/SendBtn"

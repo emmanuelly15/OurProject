@@ -17,7 +17,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.PackageManagerCompat;
 
 public class GPS extends AppCompatActivity {
-    private TextView textViewlongitude, textViewlatitude;
+    private TextView textViewlongitude, textViewlatitude, textViewcoord;
     private LocationManager locationManager;
 
     public String glocation;
@@ -33,29 +33,33 @@ public class GPS extends AppCompatActivity {
         textViewlongitude = findViewById(R.id.longitude);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
+        textViewcoord = findViewById(R.id.coord);
+
         if (ContextCompat.checkSelfPermission(GPS.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
             ContextCompat.checkSelfPermission(GPS.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
         {
             ActivityCompat.requestPermissions(GPS.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},1);
         }
 
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10, 1, new LocationListener() {
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10, 100, new LocationListener() {
             @Override
             public void onLocationChanged(@NonNull Location location) {
 
-                textViewlongitude.setText((String.valueOf(location.getLongitude())));
+                textViewlongitude.setText(String.valueOf(location.getLongitude()));
                 textViewlatitude.setText(String.valueOf(location.getLatitude()));
 
                 lg = String.valueOf(location.getLongitude());
                 lt = String.valueOf(location.getLatitude());
 
                 //lt=textViewlongitude.getText().toString();
-                glocation= lg+"-"+lt; //Location's string
+                glocation= "E" + lg + "\n" + "S" + lt; //Location's string
                 Toast.makeText(GPS.this, glocation,Toast.LENGTH_SHORT).show();
                 /*//Sending from GPS Activity to Description Activity
                 Intent lintent= new Intent(getApplicationContext(),DescriptionActivity.class);
                 lintent.putExtra("theLocation",glocation);
                 startActivity(lintent);*/
+
+                textViewcoord.setText(String.valueOf(glocation));
             }
 
         });

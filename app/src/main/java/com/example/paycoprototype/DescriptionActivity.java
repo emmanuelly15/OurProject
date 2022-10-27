@@ -70,7 +70,7 @@ public class DescriptionActivity extends AppCompatActivity {
     private Button openb;
     private Button sendBtn;
     //private String base_url ="http://api.payco.gngengineering.co.za/api/ImageUpload/UploadImages";
-    private String base_url = "https://5073-41-113-62-141.eu.ngrok.io/api/ImageUpload/UploadImages";
+    private String base_url = "https://ba3f-41-113-34-138.eu.ngrok.io/api/ImageUpload/UploadImages";
     // RequestQueue rq;
 
     private String imageFile;
@@ -82,6 +82,11 @@ public class DescriptionActivity extends AppCompatActivity {
     EditText TitleFill, typefill, locationfill, emaildetails, commentfill, AmountFill;
 
     private Button mylocation;
+    private TextView textViewcoord;
+    private LocationManager locationManager;
+    public String glocation;
+    public String lg;
+    public String lt;
 
 
     @Override
@@ -177,6 +182,26 @@ public class DescriptionActivity extends AppCompatActivity {
             }
         });*/
 
+        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        textViewcoord = findViewById(R.id.locationfill);
+        if (ContextCompat.checkSelfPermission(DescriptionActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(DescriptionActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(DescriptionActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},1);
+        }
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 100, 1, new LocationListener() {
+                    @Override
+                    public void onLocationChanged(@NonNull Location location) {
+                        lg = String.valueOf(location.getLongitude());
+                        lt = String.valueOf(location.getLatitude());
+
+                        glocation= "E" + lg + "\t" + "  "+ "S" + lt; //Location's string
+                        Toast.makeText(DescriptionActivity.this, glocation,Toast.LENGTH_SHORT).show();
+
+                        textViewcoord.setText(String.valueOf(glocation));
+                    }
+                });
+
         openb = (Button) findViewById(R.id.AttachButton);
         openb.setOnClickListener(new View.OnClickListener() {
 
@@ -220,7 +245,7 @@ public class DescriptionActivity extends AppCompatActivity {
                     document.requestFocus();
                     document.setError("Field Cannot Be Empty");
                 }*/
-                EditText location = (EditText) findViewById(R.id.locationfill); //location
+                TextView location = (TextView) findViewById(R.id.locationfill); //location
                 if (location.getText().toString().length()==0){
                     location.requestFocus();
                     location.setError("Field Cannot Be Empty");
@@ -230,10 +255,10 @@ public class DescriptionActivity extends AppCompatActivity {
                     amount.requestFocus();
                     amount.setError("Field Cannot Be Empty");
                 }
-                else if (!amount.getText().toString().matches( "[0-10]")){
+                /*else if (!amount.getText().toString().matches( "[0-10]")){
                     amount.requestFocus();
                     amount.setError(("Please Enter in Numeral Values, No Currency or Letter"));
-                }
+                }*/
 
                 /*boolean check = validateinfo(title.getText().toString(), document.getText().toString(),
                         email.getText().toString(), location.getText().toString(),
@@ -254,13 +279,12 @@ public class DescriptionActivity extends AppCompatActivity {
                         .addFormDataPart("fileformat", elSelected)
                         .addFormDataPart("location", location.getText().toString())
                         .addFormDataPart("amount", amount.getText().toString())
-                        .addFormDataPart("title", "Square Logo")
                         .addFormDataPart("image", "logo-square.png",
                                 RequestBody.create(MEDIA_TYPE_PNG, new File(imageFile)))
                         .build();
 
-/*
-                AlertDialog.Builder albuilder = new AlertDialog.Builder(DescriptionActivity.this);
+
+                /*AlertDialog.Builder albuilder = new AlertDialog.Builder(DescriptionActivity.this);
                 albuilder.setCancelable(true);
                 albuilder.setTitle("Payco");
                 albuilder.setMessage("Your document was uploaded!");
@@ -276,14 +300,12 @@ public class DescriptionActivity extends AppCompatActivity {
                         //Intent intent= new Intent (DescriptionActivity.this, HomeFragment.class);//this one will be the same still
                         //startActivity(intent);
 
-                        Fragment hfrag = new HomeFragment();
+                        /*Fragment hfrag = new HomeFragment();
                         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.container, hfrag).commit();
-
                     }
-                });
-                albuilder.show();
-*/
+
+                });*/
 
                 Request request = new Request.Builder()
                         //.header("Authorization", "Client-ID " + IMGUR_CLIENT_ID)
@@ -292,6 +314,12 @@ public class DescriptionActivity extends AppCompatActivity {
                         .build();
 
                 final OkHttpClient client = new OkHttpClient();
+                /*try (Response response = client.newCall(request).execute())
+                {
+                    if (response.isSuccessful())
+                        albuilder.show();
+                }catch(Exception e){System.out.println(e.toString());}*/
+
                 try (Response response = client.newCall(request).execute()) {
                     if (!response.isSuccessful())
                         throw new IOException("Unexpected code " + response);
