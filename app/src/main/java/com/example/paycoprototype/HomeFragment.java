@@ -60,8 +60,10 @@ public class HomeFragment extends Fragment{
     final List<DocumentData> documentData = new ArrayList<DocumentData>();;
 
     Button AddBtn;
+
+    Button ref;
     //private String base_url ="https://2ad1-41-113-95-53.eu.ngrok.io/document";
-    private String base_url ="https://ba3f-41-113-34-138.eu.ngrok.io/document";
+    private String base_url ="https://e4d1-41-113-79-36.eu.ngrok.io/document";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,7 +123,19 @@ public class HomeFragment extends Fragment{
                 getActivity().startActivity(in);
             }
         });
+        ref = (Button) v.findViewById(R.id.refresh);
+        ref.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //getFragmentManager().beginTrnsaction().detach(fragment.this).attach(fragment.this).commit();
+                //getFragmentManager().beginTransaction().detach(HomeFragment.this).attach(HomeFragment.this).commit();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+                Toast.makeText(getActivity(), "Page has been Refreshed",Toast.LENGTH_LONG).show();
+            }
+        });
         return v;
+
     }
 }
 

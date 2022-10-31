@@ -70,7 +70,7 @@ public class DescriptionActivity extends AppCompatActivity {
     private Button openb;
     private Button sendBtn;
     //private String base_url ="http://api.payco.gngengineering.co.za/api/ImageUpload/UploadImages";
-    private String base_url = "https://ba3f-41-113-34-138.eu.ngrok.io/api/ImageUpload/UploadImages";
+    private String base_url = "https://e4d1-41-113-79-36.eu.ngrok.io/api/ImageUpload/UploadImages";
     // RequestQueue rq;
 
     private String imageFile;
@@ -219,7 +219,6 @@ public class DescriptionActivity extends AppCompatActivity {
         });
 
         //Listener for the sendButton
-
         sendBtn = (Button) findViewById(R.id.SendBtn);
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -284,10 +283,10 @@ public class DescriptionActivity extends AppCompatActivity {
                         .build();
 
 
-                /*AlertDialog.Builder albuilder = new AlertDialog.Builder(DescriptionActivity.this);
+                AlertDialog.Builder albuilder = new AlertDialog.Builder(DescriptionActivity.this);
                 albuilder.setCancelable(true);
                 albuilder.setTitle("Payco");
-                albuilder.setMessage("Your document was uploaded!");
+                albuilder.setMessage("Your document was uploaded!" + "\n" +"Return to the Homepage");
                 albuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -297,15 +296,21 @@ public class DescriptionActivity extends AppCompatActivity {
                 albuilder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        //Intent intent= new Intent (DescriptionActivity.this, HomeFragment.class);//this one will be the same still
+                        /*//Intent intent= new Intent (DescriptionActivity.this, HomeFragment.class);//this one will be the same still
                         //startActivity(intent);
 
-                        /*Fragment hfrag = new HomeFragment();
+                        Fragment hfrag = new HomeFragment();
                         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.container, hfrag).commit();
+                        fragmentTransaction.replace(R.id.container, this.HomeFragment).commit();*/
+
+                        title.setText(" ");
+                        comment.setText(" ");
+                        email.setText(" ");
+                        amount.setText(" ");
+                        location.setText(" ");
                     }
 
-                });*/
+                });
 
                 Request request = new Request.Builder()
                         //.header("Authorization", "Client-ID " + IMGUR_CLIENT_ID)
@@ -321,7 +326,10 @@ public class DescriptionActivity extends AppCompatActivity {
                 }catch(Exception e){System.out.println(e.toString());}*/
 
                 try (Response response = client.newCall(request).execute()) {
-                    if (!response.isSuccessful())
+                    if (response.isSuccessful()){
+                        albuilder.show();
+                    }
+                    else if (!response.isSuccessful())
                         throw new IOException("Unexpected code " + response);
 
                     System.out.println(response.body().string());

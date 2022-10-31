@@ -41,6 +41,20 @@
             android:textSize="10dp"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="54dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-50dp"
+            android:backgroundTint="@color/purple_500"
+            android:foreground="@android:drawable/ic_popup_sync"
+            android:onClick="AddDoc"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            tools:ignore="SpeakableTextPresentCheck" />
+
         <de.codecrafters.tableview.TableView
             android:id="@+id/tableView"
             android:layout_width="match_parent"
