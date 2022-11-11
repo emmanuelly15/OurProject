@@ -28,15 +28,16 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="97dp"
         android:layout_height="21dp"
+
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="-166dp"
         android:layout_marginTop="211dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="43dp"
         android:layout_marginBottom="371dp"
-        android:layout_alignLeft="@id/txtName"
         android:text="Name:"
         android:textStyle="bold" />
 
